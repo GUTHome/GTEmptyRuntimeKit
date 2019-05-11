@@ -10,11 +10,12 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, GTLoadingStatusStyle){
-    GTLoadingStatusStyleDefault = 0,        //移除
-    GTLoadingStatusStyleNoData  = 1,        //无数据
+    GTLoadingStatusStyleDefault = 0,        //移除视图
+    GTLoadingStatusStyleNoData  = 1,        //暂无数据
     GTLoadingStatusStyleNetError= 2,        //网络失败
-    GTLoadingStatusStyleOther   = 3,        //支持其他自定义：区别于NoData/NetError之外的特别需求情况
-    GTLoadingStatusStyleLoading = 4,        //加载中：给view加一个菊花
+    GTLoadingStatusStyleOther   = 3,        //特殊需求
+    GTLoadingStatusStyleReView  = 4,        //全新订制
+    GTLoadingStatusStyleLoading = 5,        //加载菊花
 };
 
 @interface GTLoadManager : NSObject
@@ -50,6 +51,10 @@ typedef NS_ENUM(NSInteger, GTLoadingStatusStyle){
 
 @property (nonatomic ,strong) UIColor *statusButtonBorderColor; //按钮边框颜色
 @property (nonatomic, assign) CGFloat statusButtonBorderWidth;  //宽度
+
+/// 以下属性针对GTLoadingStatusStyleReView类型起作用
+@property (nonatomic, strong)UIView *resetView;
+@property (nonatomic, assign)CGSize resetViewSize;
 
 @end
 

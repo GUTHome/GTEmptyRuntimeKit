@@ -43,6 +43,7 @@ const char * kGT_LOADING_VIEW_KEY = "kGT_LOADING_VIEW_KEY";
         case GTLoadingStatusStyleNoData:
         case GTLoadingStatusStyleNetError:
         case GTLoadingStatusStyleOther:
+        case GTLoadingStatusStyleReView:
         {
             stateView = [self statusViewForState:gtLoadingStyle];
         }

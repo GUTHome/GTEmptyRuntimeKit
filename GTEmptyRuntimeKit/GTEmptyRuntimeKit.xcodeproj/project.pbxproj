@@ -20,6 +20,8 @@
 		61A8429422868E9700B0618A /* UIView+GTEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A8429322868E9700B0618A /* UIView+GTEmpty.m */; };
 		61A842972286AEB100B0618A /* GTLoadConfiger.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A842962286AEB100B0618A /* GTLoadConfiger.m */; };
 		61A8429B2286F80C00B0618A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A8429A2286F80C00B0618A /* TestViewController.m */; };
+		61A8429E2287265800B0618A /* GTCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A8429D2287265800B0618A /* GTCustomView.m */; };
+		61A842A02287266400B0618A /* GTCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61A8429F2287266400B0618A /* GTCustomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,9 @@
 		61A842962286AEB100B0618A /* GTLoadConfiger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTLoadConfiger.m; sourceTree = "<group>"; };
 		61A842992286F80C00B0618A /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		61A8429A2286F80C00B0618A /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		61A8429C2287265800B0618A /* GTCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCustomView.h; sourceTree = "<group>"; };
+		61A8429D2287265800B0618A /* GTCustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTCustomView.m; sourceTree = "<group>"; };
+		61A8429F2287266400B0618A /* GTCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GTCustomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +174,9 @@
 			children = (
 				61A842992286F80C00B0618A /* TestViewController.h */,
 				61A8429A2286F80C00B0618A /* TestViewController.m */,
+				61A8429C2287265800B0618A /* GTCustomView.h */,
+				61A8429D2287265800B0618A /* GTCustomView.m */,
+				61A8429F2287266400B0618A /* GTCustomView.xib */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -278,6 +286,7 @@
 			files = (
 				61A8426222868DA800B0618A /* LaunchScreen.storyboard in Resources */,
 				61A8425F22868DA800B0618A /* Assets.xcassets in Resources */,
+				61A842A02287266400B0618A /* GTCustomView.xib in Resources */,
 				61A8425D22868DA700B0618A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +320,7 @@
 				61A8425722868DA700B0618A /* AppDelegate.m in Sources */,
 				61A8429B2286F80C00B0618A /* TestViewController.m in Sources */,
 				61A8429122868E5D00B0618A /* GTLoadManager.m in Sources */,
+				61A8429E2287265800B0618A /* GTCustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

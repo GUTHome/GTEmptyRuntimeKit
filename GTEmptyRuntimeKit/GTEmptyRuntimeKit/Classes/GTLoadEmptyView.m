@@ -125,7 +125,12 @@
                 self.actionButton.layer.borderColor = manager.statusButtonBorderColor.CGColor ?: [UIColor clearColor].CGColor;
             }
             break;
+        case GTLoadingStatusStyleReView:
+        {
+            //展示一个全新的subview
             
+        }
+            break;
         default:
             break;
     }
@@ -187,9 +192,12 @@
     
     //loading情况
     if (contentViewSize.height == 0) {
-        CGFloat loadingViewHeight = CGRectGetHeight(self.indicatorView.bounds);
-        CGFloat loadingViewWidth = contentViewSize.width;
-        contentViewSize = CGSizeMake(loadingViewWidth, loadingViewHeight);
+        contentViewSize.height = CGRectGetHeight(self.indicatorView.bounds);
+    }
+    
+    //resetView情况
+    if (self.manager.loadStyle == GTLoadingStatusStyleReView) {
+        contentViewSize.height = self.manager.resetViewSize.height;
     }
     
     // contentView 默认垂直居中于 scrollView
@@ -200,6 +208,12 @@
     CGFloat scrollView_w = fmax(CGRectGetWidth(self.scrollView.bounds) -self.scrollView.contentInset.left -self.scrollView.contentInset.right, contentViewSize.width);
     CGFloat scrollView_h = fmax(CGRectGetHeight(self.scrollView.bounds) -self.scrollView.contentInset.top -self.scrollView.contentInset.bottom, CGRectGetMaxY(self.contentView.frame));
     self.scrollView.contentSize = CGSizeMake(scrollView_w, scrollView_h);
+    
+    //resetView情况
+    if (self.manager.loadStyle == GTLoadingStatusStyleReView) {
+        [self.contentView addSubview:self.manager.resetView];
+        self.manager.resetView.frame = self.contentView.bounds;
+    }
     
     CGFloat originY = 0;
     CGFloat resultWidth = contentViewSize.width;

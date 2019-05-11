@@ -8,6 +8,7 @@
 
 #import "TestViewController.h"
 #import "UIView+GTEmpty.h"
+#import "GTCustomView.h"
 
 @interface TestViewController ()
 
@@ -43,6 +44,26 @@
 //    manager.statusImageData = [UIImage imageNamed:@"icon_message_no"];
 //    self.view.loadingManager = manager;
 //    self.view.gtLoadingStyle = GTLoadingStatusStyleOther;
+    
+    /// 使用订制的类型
+//    self.view.gtLoadingStyle = GTLoadingStatusStyleLoading;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//
+//        GTCustomView *view = [[NSBundle mainBundle] loadNibNamed:@"GTCustomView" owner:nil options:nil].lastObject;
+//        view.frame = CGRectMake(0, 0, 0, 300);
+//        [view.customButton addTarget:self action:@selector(customButtonClick) forControlEvents:UIControlEventTouchUpInside];
+//        GTLoadManager *manager = [[GTLoadManager alloc] init];
+//        manager.resetView = view;
+//        manager.resetViewSize = view.frame.size;
+//        self.view.loadingManager = manager;
+//        self.view.gtLoadingStyle = GTLoadingStatusStyleReView;
+//    });
+    
+    
+}
+
+- (void)customButtonClick{
+    [[[UIAlertView alloc] initWithTitle:@"订制的view" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
 }
 
 @end

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GTCustomView">
+            <rect key="frame" x="0.0" y="0.0" width="373" height="322"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqU-XM-8ht">
+                    <rect key="frame" x="125" y="167" width="123" height="30"/>
+                    <state key="normal" title="哈哈哈哈哈点击我"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_nothing" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-Cm-kel">
+                    <rect key="frame" x="136.5" y="20" width="100" height="75"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_message_no" translatesAutoresizingMaskIntoConstraints="NO" id="2CB-Cd-ihf">
+                    <rect key="frame" x="136.5" y="227" width="100" height="75"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DBu-Cm-kel" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="50p-5X-sMb"/>
+                <constraint firstItem="RqU-XM-8ht" firstAttribute="centerX" secondItem="2CB-Cd-ihf" secondAttribute="centerX" id="HEJ-vo-m9g"/>
+                <constraint firstItem="2CB-Cd-ihf" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Lcg-PZ-dx1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2CB-Cd-ihf" secondAttribute="bottom" constant="20" id="S7A-Gv-Fef"/>
+                <constraint firstItem="RqU-XM-8ht" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DBu-Cm-kel" secondAttribute="bottom" constant="10" id="UsM-sv-hVj"/>
+                <constraint firstItem="2CB-Cd-ihf" firstAttribute="top" secondItem="RqU-XM-8ht" secondAttribute="bottom" constant="30" id="Yf5-2v-8jI"/>
+                <constraint firstItem="DBu-Cm-kel" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="fG4-ct-Td9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="customButton" destination="RqU-XM-8ht" id="S16-4v-VRB"/>
+            </connections>
+            <point key="canvasLocation" x="313" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_message_no" width="100" height="75"/>
+        <image name="icon_nothing" width="100" height="75"/>
+    </resources>
+</document>
